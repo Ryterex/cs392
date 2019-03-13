@@ -1,0 +1,6 @@
+trap "kill 0" EXIT
+gcc -o server server.c
+gcc -o client client.c
+./server 2000 &
+./client localhost 2000
+wait
